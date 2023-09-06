@@ -17,8 +17,8 @@ app.get('/api', (req, res) => {
 	// get the information needed in the response
 	const current_day = new Date().toLocaleString('en-US', { weekday: 'long' })
 	const utc_time = new Date().toISOString()
-	const githubFileUrl = 'file'
-	const githubRepoUrl = 'repo'
+	const githubFileUrl = 'https://github.com/ewomatc/hngx-stage-one/blob/main/app.js'
+	const githubRepoUrl = 'https://github.com/ewomatc/hngx-stage-one'
 
 	// send json response
 	res.status(200).json({
