@@ -23,7 +23,7 @@ app.get('/api', (req, res) => {
 
 	// get the information needed in the response
 	const current_day = new Date().toLocaleString('en-US', { weekday: 'long' })
-	const utc_time = new Date().toISOString()
+	const utc_time = new Date().toISOString().slice(0, 19) + 'Z'
 	const githubFileUrl = 'https://github.com/ewomatc/hngx-stage-one/blob/main/app.js'
 	const githubRepoUrl = 'https://github.com/ewomatc/hngx-stage-one'
 
