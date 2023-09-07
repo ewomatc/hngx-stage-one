@@ -2,7 +2,14 @@ const express = require('express')
 const app = express()
 const PORT = 8080;
 
-// handle get request
+//handle default get request
+app.get('/', (req, res) => {
+	res.json({
+		message: 'welcome to my API'
+	})
+})
+
+// handle info get request
 app.get('/api', (req, res) => {
 	// get query params
 	const { slack_name, track } = req.query;
